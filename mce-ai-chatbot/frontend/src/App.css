@@ -1,0 +1,713 @@
+/* ==========================================
+   GLOBAL
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.header {
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  background: #173b8f;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo h1 {
+  font-size: 21px;
+  color: #172554;
+}
+
+.logo p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  color: #16a34a;
+}
+
+.status span {
+  width: 9px;
+  height: 9px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 4px #dcfce7;
+}
+
+
+/* ==========================================
+   MAIN CHAT CONTAINER
+   ========================================== */
+
+.chat-container {
+  flex: 1;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 40px 25px 170px;
+}
+
+
+/* ==========================================
+   WELCOME SECTION
+   ========================================== */
+
+.welcome {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.bot-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 20px;
+
+  background: #e8efff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 35px;
+
+  box-shadow: 0 8px 25px rgba(23, 59, 143, 0.08);
+}
+
+.welcome h2 {
+  font-size: 28px;
+  color: #172554;
+}
+
+.welcome p {
+  margin-top: 10px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* ==========================================
+   SUGGESTION BUTTONS
+   ========================================== */
+
+.suggestions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.suggestions button {
+  border: 1px solid #dbe3f0;
+
+  background: white;
+
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  color: #334155;
+
+  transition: all 0.2s ease;
+}
+
+.suggestions button:hover {
+  background: #eef4ff;
+
+  border-color: #7c9ce8;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 12px rgba(23, 59, 143, 0.08);
+}
+
+
+/* ==========================================
+   MESSAGES CONTAINER
+   ========================================== */
+
+.messages {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  width: 100%;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 10px;
+
+  width: 100%;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.bot {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+/* ==========================================
+   SMALL BOT ICON
+   ========================================== */
+
+.small-bot-icon {
+  width: 34px;
+  height: 34px;
+
+  min-width: 34px;
+
+  border-radius: 10px;
+
+  background: #e8efff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+
+/* ==========================================
+   MESSAGE BUBBLE
+   ========================================== */
+
+.message {
+  max-width: 70%;
+
+  padding: 13px 17px;
+
+  border-radius: 15px;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  word-wrap: break-word;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   BOT MESSAGE
+   ========================================== */
+
+.message-row.bot .message {
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  color: #334155;
+
+  border-bottom-left-radius: 4px;
+
+  /*
+    IMPORTANT:
+    Keeps \n line breaks from backend responses.
+  */
+  white-space: pre-line;
+
+  line-height: 1.7;
+
+  text-align: left;
+
+  padding: 16px 20px;
+
+  max-width: 85%;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+
+/* ==========================================
+   USER MESSAGE
+   ========================================== */
+
+.message-row.user .message {
+  background: #173b8f;
+
+  color: white;
+
+  border-bottom-right-radius: 4px;
+
+  line-height: 1.5;
+
+  box-shadow: 0 2px 8px rgba(23, 59, 143, 0.12);
+}
+
+
+/* ==========================================
+   COURSE / PROGRAM RESPONSE
+   ========================================== */
+
+.message-row.bot .message {
+  font-size: 15px;
+  letter-spacing: 0.05px;
+}
+
+
+/* ==========================================
+   INPUT AREA
+   ========================================== */
+
+.input-area {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  backdrop-filter: blur(10px);
+
+  border-top: 1px solid #e5e7eb;
+
+  padding: 18px 25px 12px;
+
+  z-index: 20;
+}
+
+.input-box {
+  max-width: 900px;
+
+  margin: auto;
+
+  display: flex;
+
+  background: white;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-box:focus-within {
+  border-color: #7c9ce8;
+
+  box-shadow: 0 0 0 3px rgba(124, 156, 232, 0.15);
+}
+
+.input-box input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  padding: 16px;
+
+  font-size: 15px;
+
+  color: #1e293b;
+
+  background: transparent;
+}
+
+.input-box input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* ==========================================
+   SEND BUTTON
+   ========================================== */
+
+.send-button {
+  width: 55px;
+
+  border: none;
+
+  background: #173b8f;
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.send-button:hover {
+  background: #102d70;
+}
+
+.send-button:active {
+  transform: scale(0.97);
+}
+
+
+/* ==========================================
+   DISCLAIMER
+   ========================================== */
+
+.disclaimer {
+  text-align: center;
+
+  margin-top: 8px;
+
+  font-size: 11px;
+
+  color: #94a3b8;
+}
+
+
+/* ==========================================
+   SCROLLBAR
+   ========================================== */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .header {
+    height: 70px;
+
+    padding: 0 15px;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+  }
+
+  .logo h1 {
+    font-size: 17px;
+  }
+
+  .logo p {
+    font-size: 11px;
+  }
+
+  .status {
+    font-size: 12px;
+  }
+
+  .status span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .chat-container {
+    padding: 30px 15px 155px;
+  }
+
+  .welcome {
+    margin-bottom: 28px;
+  }
+
+  .bot-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 30px;
+  }
+
+  .welcome h2 {
+    font-size: 22px;
+  }
+
+  .welcome p {
+    font-size: 14px;
+  }
+
+  .suggestions {
+    gap: 8px;
+  }
+
+  .suggestions button {
+    padding: 9px 13px;
+
+    font-size: 13px;
+  }
+
+  .message {
+    max-width: 85%;
+
+    font-size: 14px;
+  }
+
+  .message-row.bot .message {
+    max-width: 88%;
+
+    padding: 14px 16px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .small-bot-icon {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+
+    font-size: 16px;
+  }
+
+  .input-area {
+    padding: 12px 12px 8px;
+  }
+
+  .input-box input {
+    padding: 14px;
+
+    font-size: 14px;
+  }
+
+  .send-button {
+    width: 50px;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+  }
+}
+
+
+/* ==========================================
+   VERY SMALL SCREENS
+   ========================================== */
+
+@media (max-width: 400px) {
+
+  .logo p {
+    display: none;
+  }
+
+  .status {
+    font-size: 11px;
+  }
+
+  .welcome h2 {
+    font-size: 20px;
+  }
+
+  .suggestions button {
+    font-size: 12px;
+
+    padding: 8px 11px;
+  }
+
+  .message-row.bot .message {
+    max-width: 90%;
+  }
+}
+.hostel-menu-image {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin-top: 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+.admission-route-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin-top: 18px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+.admission-route-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 18px auto 0;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+/* ==========================================
+   HEADER ACTIONS & NEW CHAT
+   ========================================== */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.clear-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.clear-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+  border-color: #94a3b8;
+}
+
+/* ==========================================
+   TYPING INDICATOR
+   ========================================== */
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 18px !important;
+  min-height: 24px;
+}
+
+.typing-indicator .dot {
+  width: 8px;
+  height: 8px;
+  background: #94a3b8;
+  border-radius: 50%;
+  animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator .dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes typingBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+    background: #173b8f;
+  }
+}

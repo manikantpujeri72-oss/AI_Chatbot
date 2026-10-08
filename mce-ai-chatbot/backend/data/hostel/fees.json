@@ -1,0 +1,21 @@
+{
+  "title": "MCE Hostel Fees",
+  "rooms": [
+    {
+      "type": "2-bed room",
+      "beds": 2,
+      "fee": "₹70,000"
+    },
+    {
+      "type": "Single room",
+      "beds": 1,
+      "fee": "₹75,000"
+    },
+    {
+      "type": "Special room",
+      "beds": 1,
+      "fee": "₹1,10,000"
+    }
+  ],
+  "note": "Hostel fees may be subject to change. Please confirm the current fee with the hostel administration."
+}

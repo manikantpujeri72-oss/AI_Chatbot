@@ -1,0 +1,11 @@
+{
+  "name": "mce-ai-chatbot",
+  "version": "1.0.0",
+  "description": "MCE AI Chatbot - Fullstack Application",
+  "scripts": {
+    "start:backend": "npm --prefix backend run start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  }
+}

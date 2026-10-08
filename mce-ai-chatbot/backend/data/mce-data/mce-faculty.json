@@ -1,0 +1,13 @@
+[
+  {
+    "department": "Information Science and Engineering",
+    "shortName": "ISE",
+    "hod": {
+      "name": "Dr. Ananda Babu J",
+      "designation": "Professor and HOD",
+      "phone": "9844081383",
+      "email": "abj@mcehassan.ac.in"
+    },
+    "faculty": []
+  }
+]

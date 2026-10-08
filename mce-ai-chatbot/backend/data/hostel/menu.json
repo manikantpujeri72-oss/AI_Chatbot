@@ -1,0 +1,53 @@
+{
+  "title": "MCE Boys Hostel Weekly Menu",
+  "timings": {
+    "breakfast": "6:30 AM - 9:00 AM",
+    "lunch": "12:00 PM - 1:45 PM",
+    "eveningTea": "5:00 PM - 6:30 PM",
+    "dinner": "7:30 PM - 9:00 PM"
+  },
+  "days": {
+    "monday": {
+      "breakfast": "Avalakki Uppittu / Curd Bath / Vangibath / Karapongal / Chutney / Coffee + Milk",
+      "lunch": "Chapathi, Dal Fry, Rice, Huruli Sambar, Rasam, Curd, Pickles, Pappad",
+      "eveningTea": "Tea",
+      "dinner": "Chapathi, Brinjal Palya, Rice, Rasam, Curd, Pickles"
+    },
+    "tuesday": {
+      "breakfast": "Idli, Vada, Sambar, Chutney, Coffee + Milk",
+      "lunch": "Chapathi, Kabool Palya, Ladies Finger Sambar, Rasam, Curd, Pickles",
+      "eveningTea": "Tea",
+      "dinner": "Mushroom Palav / Vegetable Palav + Salad"
+    },
+    "wednesday": {
+      "breakfast": "Set Dosa, Chutney, Sagu, Coffee + Milk",
+      "lunch": "Chapathi, Beetroot Palya / Soppina Palya, Rice, Green Vegetables Sambar, Rasam, Curd, Pickles",
+      "eveningTea": "Tea",
+      "dinner": "Chapathi, Hesaru Kalu Palya, Rice, Rasam, Curd, Pickles"
+    },
+    "thursday": {
+      "breakfast": "Poori, Mixed Vegetable Sagu, Bambay Sagu, Chutney, Coffee + Milk",
+      "lunch": "Special Chitranna / Puliyogare, Keeru, Rice, Rasam, Curd, Pickles",
+      "eveningTea": "Tea",
+      "dinner": "Chapathi, Alu + Brinjal Palya, Rice, Moong Dal Soup, Curd, Pickles"
+    },
+    "friday": {
+      "breakfast": "Veg Palav, Salad, Coffee + Milk",
+      "lunch": "Chapathi, Alu Palya, Rice, Molake Huruli Sambar, Rasam, Curd, Pickles",
+      "eveningTea": "Tea",
+      "dinner": "Chapathi, Moong Palya, Rice, Onion + Tomato Sambar, Curd, Pickles"
+    },
+    "saturday": {
+      "breakfast": "Reve Idli, Chutney, Shavige Bath, Tomato Bath, Coffee + Milk",
+      "lunch": "Chapathi, Palak Paneer, Majjige Huli, Rice, Rasam, Curd, Pickles",
+      "eveningTea": "Tea",
+      "dinner": "Chapathi, Pav Bhaji, Onion + Lemon Rice, Rice, Rasam, Curd, Pickles"
+    },
+    "sunday": {
+      "breakfast": "Masala Dosa, Alu Palya, Chutney, Red Chilly Chutney, Coffee + Milk",
+      "lunch": "Fried Rice + Salad / Veg Biriyani + Salad / Ghee Rice, Korma, Rice, Rasam, Special Curd Rice, Champakali / Sandwich, Dry Jamun, Laddu, Jahangir / Holige, Banana",
+      "eveningTea": "Tea",
+      "dinner": "Rice, Drum Stick Sambar, Gram / Moong Palya, Curd, Pickles, Pappad, Onion Pakoda"
+    }
+  }
+}
